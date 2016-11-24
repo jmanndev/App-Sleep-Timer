@@ -14,36 +14,37 @@ namespace SleepTimer
 
         private void button10m_Click(object sender, EventArgs e)
         {
-            shutdownAction(Convert.ToString(10 * 60));
+            shutdownAction(10 * 60);
         }
 
         private void button45m_Click(object sender, EventArgs e)
         {
-            shutdownAction(Convert.ToString(45 * 60));
+            shutdownAction(45 * 60);
         }
 
         private void button1h_Click(object sender, EventArgs e)
         {
-            shutdownAction(Convert.ToString(60 * 60));
+            shutdownAction(60 * 60);
         }
 
         private void button1h30m_Click(object sender, EventArgs e)
         {
-            shutdownAction(Convert.ToString(90 * 60));
+            shutdownAction(90 * 60);
         }
 
         private void button2h_Click(object sender, EventArgs e)
         {
-            shutdownAction(Convert.ToString(120 * 60));
+            shutdownAction(120 * 60);
         }
 
         private void button4h_Click(object sender, EventArgs e)
         {
-            shutdownAction(Convert.ToString(240 * 60));
+            shutdownAction(240 * 60);
         }
 
         private void buttonAbort_Click(object sender, EventArgs e)
         {
+
             shutdownAbort();
         }
 
@@ -62,7 +63,7 @@ namespace SleepTimer
 
                 double seconds = ((hours * 60) + mins) * 60;
                 if (seconds > 0)
-                    shutdownAction(seconds.ToString());
+                    shutdownAction((int)seconds);
             }
             catch (Exception) { }
             textBoxHours.Text = "";
@@ -70,11 +71,12 @@ namespace SleepTimer
 
         }
         
-        private void shutdownAction(string input)
+        private void shutdownAction(int inputInSeconds)
         {
             shutdownAbort();
+            string eventComment = "\"Shutdown scheduled for " + Convert.ToString(inputInSeconds / 60) + " minutes.\"";
             string strCmdText;
-            strCmdText = "/C shutdown -s -t " + input;
+            strCmdText = "/C shutdown -s -t " + Convert.ToString(inputInSeconds) + " -c " + eventComment;
             run(strCmdText);
         }
 

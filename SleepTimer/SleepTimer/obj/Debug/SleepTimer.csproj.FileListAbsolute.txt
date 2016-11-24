@@ -7,3 +7,12 @@ D:\Users\Jono\Documents\GitHub\App-Sleep-Timer\SleepTimer\SleepTimer\obj\Debug\S
 D:\Users\Jono\Documents\GitHub\App-Sleep-Timer\SleepTimer\SleepTimer\obj\Debug\SleepTimer.exe
 D:\Users\Jono\Documents\GitHub\App-Sleep-Timer\SleepTimer\SleepTimer\obj\Debug\SleepTimer.pdb
 D:\Users\Jono\Documents\GitHub\App-Sleep-Timer\SleepTimer\SleepTimer\obj\Debug\SleepTimer.Form.resources
+D:\Users\Jono\Documents\GitHub\sleepTimer\SleepTimer\SleepTimer\bin\Debug\SleepTimer.exe.config
+D:\Users\Jono\Documents\GitHub\sleepTimer\SleepTimer\SleepTimer\obj\Debug\SleepTimer.exe
+D:\Users\Jono\Documents\GitHub\sleepTimer\SleepTimer\SleepTimer\obj\Debug\SleepTimer.pdb
+D:\Users\Jono\Documents\GitHub\sleepTimer\SleepTimer\SleepTimer\bin\Debug\SleepTimer.exe
+D:\Users\Jono\Documents\GitHub\sleepTimer\SleepTimer\SleepTimer\bin\Debug\SleepTimer.pdb
+D:\Users\Jono\Documents\GitHub\sleepTimer\SleepTimer\SleepTimer\obj\Debug\SleepTimer.csprojResolveAssemblyReference.cache
+D:\Users\Jono\Documents\GitHub\sleepTimer\SleepTimer\SleepTimer\obj\Debug\SleepTimer.Form.resources
+D:\Users\Jono\Documents\GitHub\sleepTimer\SleepTimer\SleepTimer\obj\Debug\SleepTimer.Properties.Resources.resources
+D:\Users\Jono\Documents\GitHub\sleepTimer\SleepTimer\SleepTimer\obj\Debug\SleepTimer.csproj.GenerateResource.Cache
