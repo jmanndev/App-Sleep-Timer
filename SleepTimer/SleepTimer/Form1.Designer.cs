@@ -38,9 +38,11 @@ namespace SleepTimer
             this.button2h = new System.Windows.Forms.Button();
             this.button4h = new System.Windows.Forms.Button();
             this.buttonAbort = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxHours = new System.Windows.Forms.TextBox();
             this.buttonSubmit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBoxMins = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button10m
@@ -105,30 +107,32 @@ namespace SleepTimer
             // 
             // buttonAbort
             // 
+            this.buttonAbort.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAbort.Location = new System.Drawing.Point(12, 200);
             this.buttonAbort.Name = "buttonAbort";
             this.buttonAbort.Size = new System.Drawing.Size(156, 70);
             this.buttonAbort.TabIndex = 6;
-            this.buttonAbort.Text = "abort";
+            this.buttonAbort.Text = "ABORT";
             this.buttonAbort.UseVisualStyleBackColor = true;
             this.buttonAbort.Click += new System.EventHandler(this.buttonAbort_Click);
             // 
-            // textBox1
+            // textBoxHours
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(103, 37);
-            this.textBox1.TabIndex = 7;
+            this.textBoxHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxHours.Location = new System.Drawing.Point(12, 12);
+            this.textBoxHours.Multiline = true;
+            this.textBoxHours.Name = "textBoxHours";
+            this.textBoxHours.Size = new System.Drawing.Size(47, 37);
+            this.textBoxHours.TabIndex = 7;
             // 
             // buttonSubmit
             // 
+            this.buttonSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSubmit.Location = new System.Drawing.Point(12, 55);
             this.buttonSubmit.Name = "buttonSubmit";
             this.buttonSubmit.Size = new System.Drawing.Size(156, 35);
             this.buttonSubmit.TabIndex = 8;
-            this.buttonSubmit.Text = "submit";
+            this.buttonSubmit.Text = "SUBMIT";
             this.buttonSubmit.UseVisualStyleBackColor = true;
             this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
             // 
@@ -136,11 +140,30 @@ namespace SleepTimer
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(117, 21);
+            this.label1.Location = new System.Drawing.Point(65, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 20);
+            this.label1.Size = new System.Drawing.Size(18, 20);
             this.label1.TabIndex = 9;
-            this.label1.Text = "hours";
+            this.label1.Text = "h";
+            // 
+            // textBoxMins
+            // 
+            this.textBoxMins.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxMins.Location = new System.Drawing.Point(93, 12);
+            this.textBoxMins.Multiline = true;
+            this.textBoxMins.Name = "textBoxMins";
+            this.textBoxMins.Size = new System.Drawing.Size(47, 37);
+            this.textBoxMins.TabIndex = 10;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(146, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(22, 20);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "m";
             // 
             // Form
             // 
@@ -148,9 +171,11 @@ namespace SleepTimer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(180, 287);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBoxMins);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSubmit);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxHours);
             this.Controls.Add(this.buttonAbort);
             this.Controls.Add(this.button4h);
             this.Controls.Add(this.button2h);
@@ -159,8 +184,6 @@ namespace SleepTimer
             this.Controls.Add(this.button45m);
             this.Controls.Add(this.button10m);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Location = new System.Drawing.Point(Screen.FromControl(this).Bounds.Width -
-                (this.Size.Width + 15), Screen.FromControl(this).Bounds.Height - (this.Size.Height + 35));
             this.Name = "Form";
             this.Text = "SleepTimer";
             this.ResumeLayout(false);
@@ -177,9 +200,11 @@ namespace SleepTimer
         private System.Windows.Forms.Button button2h;
         private System.Windows.Forms.Button button4h;
         private System.Windows.Forms.Button buttonAbort;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxHours;
         private System.Windows.Forms.Button buttonSubmit;
         private System.Windows.Forms.Label label1;
+        private TextBox textBoxMins;
+        private Label label2;
     }
 }
 

@@ -8,6 +8,8 @@ namespace SleepTimer
         public Form()
         {
             InitializeComponent();
+            this.Location = new System.Drawing.Point(Screen.FromControl(this).Bounds.Width -
+                (this.Size.Width + 15), Screen.FromControl(this).Bounds.Height - (this.Size.Height + 35));
         }
 
         private void button10m_Click(object sender, EventArgs e)
@@ -47,14 +49,24 @@ namespace SleepTimer
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
-            string text = textBox1.Text;
+            string hoursStr = textBoxHours.Text;
+            string minsStr = textBoxMins.Text;
+            double hours = 0;
+            double mins = 0;
             try
             {
-                double seconds = Convert.ToDouble(text) * 60 * 60;
-                shutdownAction(seconds.ToString());
+                if (hoursStr != "")
+                    hours = Convert.ToDouble(hoursStr);
+                if (minsStr != "")
+                    mins = Convert.ToDouble(minsStr);
+
+                double seconds = ((hours * 60) + mins) * 60;
+                if (seconds > 0)
+                    shutdownAction(seconds.ToString());
             }
             catch (Exception) { }
-            textBox1.Text = "";
+            textBoxHours.Text = "";
+            textBoxMins.Text = "";
 
         }
         
