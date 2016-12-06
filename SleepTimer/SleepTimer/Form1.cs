@@ -76,7 +76,7 @@ namespace SleepTimer
             shutdownAbort();
             string eventComment = "\"Shutdown scheduled for " + Convert.ToString(inputInSeconds / 60) + " minutes.\"";
             string strCmdText;
-            strCmdText = "/C shutdown -s -t " + Convert.ToString(inputInSeconds) + " -c " + eventComment;
+            strCmdText = "/C shutdown -s -f -t " + Convert.ToString(inputInSeconds) + " -c " + eventComment;
             run(strCmdText);
         }
 
